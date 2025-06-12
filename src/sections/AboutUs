@@ -1,0 +1,115 @@
+import React from 'react';
+import about from "../assets/AboutUs/about.png";
+import pattern from "../assets/AboutUs/pattern.png";
+import rightBlock from '../assets/right-block.svg';
+import leftBlock from '../assets/left-block.svg';
+import '@fontsource/rubik-one';
+
+
+
+const AboutUs = () => {
+  return (
+
+  <section className="bg-[#E6E4D5] pt-[50px] pr-[30px] pb-8 mb-[10px] rounded-xl relative w-[95vw] min-h-screen overflow-visible">
+
+
+    {/*Background */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        backgroundColor: '#f3f1e7',
+        backgroundImage: `url(${pattern})`,
+        backgroundRepeat: 'repeat',
+        backgroundSize: 'auto',
+        opacity:'5%'
+      }}
+    ></div>
+
+
+    <div className="relative z-10">
+
+      {/* ABOUT US */}
+      <h1
+        style={{
+          fontFamily: '"Rubik One", sans-serif',
+          fontSize: '108px',
+          color: '#4385F3',
+          textAlign: 'center',
+          marginTop: '0',
+          paddingTop: '100px',
+        }}
+      >
+        ABOUT US
+      </h1>
+
+
+
+      {/* Main Content */}
+      <div className="flex flex-col md:flex-row items-center justify-around gap-10">
+
+        {/* Left Image */}
+        <div className="w-full md:w-7/12 flex justify-center">
+          <img
+            src={about}
+            alt="About Us Illustration"
+            className="w-[400px] h-auto rounded-xl object-contain"
+          />
+        </div>
+      
+        {/* Right Content */}
+        <div className="w-full md:w-5/12 space-y-8"> 
+          <div>
+            <h2 className="text-3xl font-[800]">GDSC AIT</h2>
+      
+            {/* Colored lines in a flex row with equal width */}
+            <div className="flex w-full max-w-[170px] mb-4">
+              <div className="w-[34px] h-[5.54px] bg-[#EA4335]" />
+              <div className="w-[34px] h-[5.54px] bg-[#FBBC05]" />
+              <div className="w-[34px] h-[5.54px] bg-[#34A853]" />
+              <div className="w-[34px] h-[5.54px] bg-[#4285F4]" />
+            </div>
+      
+            <p className="mt-2 text-m text-gray-700">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo. Sed ut perspiciatis unde omnis iste natus error sit
+              voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            </p>
+          </div>
+      
+
+
+
+          <div className='relative'  style={{  display: 'inline-block' }}>
+            <img src={rightBlock} alt="Right Block" style={{ width: '100%', height: 'auto' }} />
+              {/* Top bulge content */}
+              <h3 className="absolute font-bold text-2xl px-4 pt-2 pb-1 top-[10px] right-[85px]">VISION</h3>
+
+              {/* Rectangular region content */}
+              <p className="absolute text-m text-gray-700 flex-1 px-4 pt-1 top-[60px] ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero omnis repellat soluta maxime voluptates asperiores ipsum! Officiis voluptates itaque eum expedita.
+              </p>
+          </div>
+
+
+          <div className='relative'  style={{  display: 'inline-block' }}>
+            <img src={leftBlock} alt="Left Block" style={{ width: '100%', height: 'auto' }} />
+            
+            {/* Top bulge content */}
+            <h3 className="absolute font-bold text-2xl px-4 pt-2 pb-1 top-[10px] left-[60px]">MISSION</h3>
+
+            {/* Rectangular region content */}
+            <p className="absolute text-m text-gray-700 flex-1 px-4 pt-1 top-[60px] ">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero omnis repellat soluta maxime voluptates asperiores ipsum! Officiis voluptates itaque eum expedita.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  );
+};
+
+export default AboutUs;
